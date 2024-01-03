@@ -57,12 +57,16 @@
 
     var greet;
 
-    if (hrs < 12)
+    if (hrs >= 5 && hrs <= 12)
         greet = 'good morning  ';
     else if (hrs >= 12 && hrs <= 17)
         greet = 'good afternoon ';
-    else if (hrs >= 17 && hrs <= 24)
+    else if (hrs >= 17 && hrs <= 22)
         greet = 'good evening  ';
+    else if (hrs >= 22 && hrs <= 24)
+        greet = 'good night  ';
+    else if (hrs <= 5)
+        greet = 'good night  ';
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
